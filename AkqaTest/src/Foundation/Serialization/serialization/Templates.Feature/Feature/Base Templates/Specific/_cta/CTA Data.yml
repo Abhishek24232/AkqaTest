@@ -1,0 +1,14 @@
+﻿---
+ID: "e13ec3fb-092f-439a-8868-4810c412a852"
+Parent: "e820345f-ddd5-4d12-8250-d4679d4ed07e"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/Base Templates/Specific/_cta/CTA Data
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200210T095822Z

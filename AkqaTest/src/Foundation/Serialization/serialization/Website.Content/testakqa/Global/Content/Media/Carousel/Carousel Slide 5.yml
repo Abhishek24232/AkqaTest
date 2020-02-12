@@ -1,0 +1,32 @@
+﻿---
+ID: "450c7d42-a2a7-4218-94f1-088075a2265a"
+Parent: "d6c2f633-ed6a-42e2-a692-4190309c478c"
+Template: "c18d3794-d126-4548-bfc8-89358de6e9c1"
+Path: /sitecore/content/testakqa/Global/Content/Media/Carousel/Carousel Slide 5
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200210T102323Z
+    - ID: "49c8a107-33de-430d-b568-acc853b023b5"
+      Hint: ImageDesktop
+      Value: |
+        <image mediaid="{C6EBC4EE-5FE3-4EC6-9D7A-44F26A2056FA}" />
+    - ID: "50adf07b-b7dc-47db-8cee-134a14401ede"
+      Hint: Title
+      Value: Carousel 5
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "66fd2cd2-13f1-4622-b320-a3c2a1a9ca97"
+      Hint: CtaText
+      Value: Read More
+    - ID: "aafed7b2-0df6-4ef0-8b54-4f32e6ec0631"
+      Hint: CtaLink
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{96D40EC1-FFEB-4728-AD4F-2BC5AF40DCB1}" />

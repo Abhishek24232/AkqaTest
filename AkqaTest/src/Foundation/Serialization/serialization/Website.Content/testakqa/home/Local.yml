@@ -1,0 +1,18 @@
+﻿---
+ID: "7471742a-12e2-4a1a-a062-0288ac868f4c"
+Parent: "96d40ec1-ffeb-4728-ad4f-2bc5af40dcb1"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/testakqa/home/Local
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Network/16x16/earth2.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200209T220316Z

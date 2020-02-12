@@ -1,0 +1,42 @@
+﻿---
+ID: "52308d40-4b82-4b23-8246-56612635cd4e"
+Parent: "3dc85f7f-9809-403f-85ec-a345e07ecd4c"
+Template: "0e308bbc-d23b-41d1-a258-3f6d17a72536"
+Path: /sitecore/content/testakqa/home/Local/Datasource/Media/Carousel/CarouselContainer
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "07ed4d54-15ba-4284-9921-3ebb296f2aa8"
+      Hint: SubTitle
+      Value: Carousel Using Dynamic Placeholders
+    - ID: "20cdf069-56fb-4c47-b645-9daae06913de"
+      Hint: InitialItemsMobile
+      Value: 5
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200210T210726Z
+    - ID: "50adf07b-b7dc-47db-8cee-134a14401ede"
+      Hint: Title
+      Value: Carousel Using Datasource
+    - ID: "66fd2cd2-13f1-4622-b320-a3c2a1a9ca97"
+      Hint: CtaText
+      Value: Text
+    - ID: "89590c63-afb6-4eb7-912a-036faefea832"
+      Hint: InitialItemsDesktop
+      Value: 5
+    - ID: "d15bb676-83e1-45f7-accc-766fc1bde62e"
+      Hint: CarouselList
+      Type: Multilist
+      Value: |
+        {8A507EB2-C228-46F7-8E06-21F54427C3C9}
+        {3DE6845E-6B0B-4743-B164-1AA8A766FF07}
+        {8AF3551C-D210-41D0-9E07-04CEC70A1018}
+    - ID: "f0f44d01-2f15-4365-a087-5f03e21b7902"
+      Hint: Description
+      Value: Lorem Ipsum
+    - ID: "f4ed4724-b187-4cc5-8205-fa3c8982b2f6"
+      Hint: Datasource
+      Value: "{D6C2F633-ED6A-42E2-A692-4190309C478C}"

@@ -1,0 +1,33 @@
+﻿
+@using Glass.Mapper.Sc.Web.Mvc
+
+@model AkqaTest.Feature.Media.Models.IImageCarousel
+
+@if (Model != null)
+{
+    if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        <div class="col-sm-6 col-xs-12">
+            <h3>@Html.Glass().Editable(Model, x => x.Title)</h3>
+
+            @Html.Glass().RenderImage(Model, x => x.ImageDesktop, new { @class = "d-block" }, isEditable: true)
+
+            @Html.Glass().RenderLink(Model, x => x.CtaLink, new { @text = Model.CtaText, @class = "btn btn-primary btn-sm" }, isEditable: true)
+        </div>
+    }
+    else
+    {
+        
+            <h3 style="position:absolute;">@Html.Glass().Editable(Model, x => x.Title)</h3>
+            if (Model.ImageDesktop != null)
+            {
+                <img class="d-block img-fluid" src="@Model.ImageDesktop.Src" />
+            }
+            if (Model.CtaLink != null)
+            {
+                <button type="button" href="@Model.CtaLink.Url" style="margin-top:-69px;margin-left: 287px;position: absolute;" class="d-block btn btn-primary btn-sm">@Model.CtaText</button>
+            }
+       
+    }
+
+}

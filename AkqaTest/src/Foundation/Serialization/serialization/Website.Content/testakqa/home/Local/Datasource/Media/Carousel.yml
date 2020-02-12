@@ -1,0 +1,14 @@
+﻿---
+ID: "3dc85f7f-9809-403f-85ec-a345e07ecd4c"
+Parent: "e2362e77-1714-44f7-9c8d-4e9c1f32ffb5"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/testakqa/home/Local/Datasource/Media/Carousel
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200209T221715Z

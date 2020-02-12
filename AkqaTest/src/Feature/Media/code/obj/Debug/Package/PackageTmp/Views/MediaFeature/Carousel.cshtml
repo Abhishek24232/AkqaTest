@@ -1,0 +1,20 @@
+﻿
+@using Glass.Mapper.Sc.Web.Mvc
+
+@model AkqaTest.Feature.Media.Models.IImageCarousel
+
+@if (Model != null)
+{
+    <div class="carousel-item" >
+        <h3 style="position:absolute;">@Html.Glass().Editable(Model, x => x.Title)</h3>
+        @if (Model.ImageDesktop != null)
+        {
+            <img class="d-block img-fluid" src="@Model.ImageDesktop.Src" />
+        }
+        @if (Model.CtaLink != null)
+        {
+            <button type="button" href="@Model.CtaLink.Url" style="margin-top:-69px;margin-left: 287px;position: absolute;" class="d-block btn btn-primary btn-sm">@Model.CtaText</button>
+        }
+    </div>
+
+}

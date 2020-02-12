@@ -1,0 +1,21 @@
+﻿---
+ID: "4943c3fb-e860-4317-a344-952f7c9412ac"
+Parent: "0f72b30d-3176-4137-a65e-a082c2c8be88"
+Template: "0a2847e6-9885-450b-b61e-f9e6528480ef"
+Path: /sitecore/content/testakqa/Global/Content/Dictionary
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Business/16x16/address_book2.png
+- ID: "cd72e892-d8bb-487c-9eb1-6a57c48c72cc"
+  Hint: Fallback Domain
+  Value: "{4943C3FB-E860-4317-A344-952F7C9412AC}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200212T122801Z

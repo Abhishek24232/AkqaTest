@@ -1,0 +1,107 @@
+﻿@using AkqaTest.Foundation.SitecoreExtensions.Extensions
+@using Glass.Mapper.Sc.Web.Mvc
+
+@model AkqaTest.Feature.Media.Models.ICarsouselContainer
+
+
+@if (Model != null && Model.Datasource.Children.Any())
+{
+    <h2>@Html.Glass().Editable(x => x.Title)</h2>
+
+    <p>@Html.Glass().Editable(x => x.Description) </p>
+
+    if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        <div class="row">
+            @foreach (var carousel in Model.Datasource.Children.Take(Model.InitialItemsDesktop))
+            {
+                <div class="col-sm-6 col-xs-12">
+                    <h3>@Html.Glass().Editable(carousel, x => x.Title)</h3>
+
+                    @Html.Glass().RenderImage(carousel, x => x.ImageDesktop, new { @class = "d-block" }, isEditable: true)
+
+                    @Html.Glass().RenderLink(carousel, x => x.CtaLink, new { @text = carousel.CtaText, @class = "btn btn-primary btn-sm" }, isEditable: true)
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div id="heroCarousel" class="carousel slide" style="width: 50%;" data-ride="carousel">
+            @if (Model.Datasource.Children != null)
+            {
+                <ol class="carousel-indicators">
+                    @{
+                        var i = 0;
+                        foreach (var carousel in Model.Datasource.Children.Take(Model.InitialItemsDesktop))
+                        {
+                            <li data-target="#heroCarousel" data-slide-to="@i" @Html.Raw(i == 0 ? "class=\"active\"" : "")></li>
+                            i++;
+                        }
+                    }
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    @{
+                        var j = 1;
+                        foreach (var carousel in Model.Datasource.Children.Take(Model.InitialItemsDesktop))
+                        {
+                            <div class="carousel-item@(j == 1 ? " active" : "")">
+                                <h3 style="position:absolute;">@Html.Glass().Editable(carousel, x => x.Title)</h3>
+                                @if (carousel.ImageDesktop != null)
+                                {
+                                    <img class="d-block img-fluid" src="@carousel.ImageDesktop.Src" />
+                                }
+                                @if (carousel.CtaLink != null)
+                                {
+                                    <button type="button" href="@carousel.CtaLink.Url" style="margin-top:-69px;margin-left: 287px;position: absolute;" class="d-block btn btn-primary btn-sm">@carousel.CtaText</button>
+                                }
+                            </div>
+
+                            j++;
+                        }
+                    }
+                </div>
+                <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">@Html.Sitecore().Dictionary("/carousel/previous")</span>
+                </a>
+                <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">@Html.Sitecore().Dictionary("/carousel/next")</span>
+                </a>
+            }
+        </div>
+
+
+    }
+
+    //Carousel Using Dynamic PLaceholder
+
+    <h2>@Html.Glass().Editable(x => x.SubTitle)</h2>
+
+    <p>@Html.Glass().Editable(x => x.Description) </p>
+
+    <div class="row" style="background-color:gray;">
+        <div class="col-sm-6 col-xs-12">
+
+            <div id="heroCarousel" class="carousel slide" style="width: 50%;" data-ride="carousel">
+
+                <div class="carousel-inner" role="listbox">
+
+                    @Html.Sitecore().DynamicPlaceholder("CarouselContainerPlaceholder", count:1, maxCount:6, seed:0)
+
+                </div>
+
+                <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">@Html.Sitecore().Dictionary("/carousel/previous")</span>
+                </a>
+                <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">@Html.Sitecore().Dictionary("/carousel/next")</span>
+                </a>
+
+            </div>
+        </div>
+    </div>
+}
